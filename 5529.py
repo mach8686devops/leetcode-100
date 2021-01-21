@@ -38,7 +38,9 @@ class Solution:
                         xx, yy = x + dx * i, y + dy * i
                         if 0 <= xx < n and 0 <= yy < m and grid[xx][yy] != '#':
                             nw = (
-                                cp if r == 0 else (xx, yy), mp if r == 1 else (xx, yy), r ^ 1,
+                                cp if r == 0 else (xx, yy),
+                                mp if r == 1 else (xx, yy),
+                                r ^ 1,
                                 steps + (0 if r == 0 else 1))
                             if not work(nw):
                                 f[status] = True

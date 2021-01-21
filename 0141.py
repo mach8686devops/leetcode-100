@@ -13,5 +13,6 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
-        while head and head.val != None: head.val, head = None, head.next
+        while head and head.val != None:
+            head.val, head = None, head.next
         return head != None
