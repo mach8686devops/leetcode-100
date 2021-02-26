@@ -13,6 +13,6 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
-        while head and head.val != None:
+        while head and head.val is not None:
             head.val, head = None, head.next
-        return head != None
+        return head is not None

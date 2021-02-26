@@ -20,3 +20,6 @@ class Solution:
 #
 # 代码后面的判断条件都是 if，而不是 elif，因为是满足两个条件的任意一个就可以继续向下搜索，
 # 而不是同时只能满足其中的一个。
+
+
+print(Solution().generateParenthesis(n=3))

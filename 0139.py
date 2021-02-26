@@ -5,7 +5,8 @@ class Solution:
             if not s in d:
                 for i in range(1, 1 + len(s)):
                     d[s[:i]] = s[:i] in wordDict and (i == len(s) or f(s[i:]))
-                    if d[s[:i]]: return True
+                    if d[s[:i]]:
+                        return True
                 return False
             return d[s]
 

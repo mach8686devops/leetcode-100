@@ -2,9 +2,10 @@ import math
 
 
 class Solution:
-    # def isPalindrome(self, x: int) -> bool:
-    #     # 海象算子
-    #     return (k:=str(x)) == k[::-1]
+    def isPalindrome(self, x: int) -> bool:
+        # 海象算子
+        pass
+        # return (k:=str(x)) == k[::-1]
 
     def isPalindrome2(self, x: int) -> bool:
         r = list(map(lambda i: int(10 ** -i * x % 10), range(int(math.log10(x)), -1, -1))) if x > 0 else [0, x]
