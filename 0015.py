@@ -12,6 +12,7 @@ class Solution(object):
         nums.sort()
         res = set()
         for i, v in enumerate(nums[:-2]):
+            # 剪枝叶 优化
             if i >= 1 and v == nums[i - 1]:
                 continue
             d = {}

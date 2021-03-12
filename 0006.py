@@ -19,4 +19,4 @@ class Solution(object):
 
 s = "PAYPALISHIRING"
 numRows = 4
-print(Solution().convert(s=s,numRows=numRows))
+print(Solution().convert(s=s, numRows=numRows))
