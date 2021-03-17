@@ -1,6 +1,30 @@
 # 马拉车 一般不考
 # 最长回文子串
 
+# 实现中心扩展法
+
+
+class Solution3:
+    def longestPalindrome(self, s: str) -> str:
+        n = len(s)
+        res = str()
+        if n < 2:
+            return s
+        for i in range(n - 1):
+            oddstr = self.extend(s, i, i)
+            evenstr = self.extend(s, i, i + 1)
+            temp = oddstr if len(oddstr) > len(evenstr) else evenstr
+            if len(temp) > len(res):
+                res = temp
+
+        return res
+
+    def extend(self, s: str, i, j) -> str:
+        while i >= 0 and j < len(s) and s[i] == s[j]:
+            i -= 1
+            j += 1
+        return s[i + 1:j]
+
 
 class Solution:
     def longestPalindrome(self, s: str) -> str:

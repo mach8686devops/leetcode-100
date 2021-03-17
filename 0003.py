@@ -2,13 +2,13 @@ class Solution:
 
     def lengthOfLongestSubstring(self, s: str) -> int:
         hashmap = {}
-        left = maxLen = 0
+        left = ans = 0
         for i, c in enumerate(s):
             if c in hashmap:
                 left = max(left, hashmap.get(c) + 1)
             hashmap[c] = i
-            maxLen = max(maxLen, i - left + 1)
-        return maxLen
+            ans = max(ans, i - left + 1)
+        return ans
 
     def lengthOfLongestSubstring2(self, s: str) -> int:
         # 哈希集合，记录每个字符是否出现过
