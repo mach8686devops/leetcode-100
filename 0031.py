@@ -1,4 +1,5 @@
 # 原地修改
+from typing import List
 
 
 class Solution:

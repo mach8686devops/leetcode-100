@@ -1,6 +1,6 @@
 # 两数之和
 #  哈希表
-from threading import Semaphore
+# from threading import Semaphore
 
 
 class Solution:

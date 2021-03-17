@@ -1,6 +1,6 @@
 import collections
 from typing import List
-
+import string
 
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
@@ -14,7 +14,8 @@ class Solution:
                 return length
 
             for i in range(len(word)):
-                for c in 'abcdefghijklmnopqrstuvwxyz':
+                # for c in 'abcdefghijklmnopqrstuvwxyz':
+                for c in string.ascii_lowercase:
                     next_word = word[:i] + c + word[i + 1:]
                     if next_word in wordList:
                         queue.append((next_word, length + 1))
