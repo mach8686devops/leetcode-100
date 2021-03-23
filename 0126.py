@@ -27,7 +27,9 @@ class Solution(object):
                 bq, eq, rev = eq, bq, not rev
 
         def bt(x):
-            return [[x]] if x == endWord else [[x] + rest for y in tree[x] for rest in bt(y)]
+            if x == endWord:
+                return [[x]]
+            return [[x] + rest for y in tree[x] for rest in bt(y)]
 
         return bt(beginWord)
 
@@ -63,7 +65,6 @@ class Solution2(object):
     def findLadders_wrong_fix(self, beginWord, endWord, wordList):
 
         wordList = set(wordList)
-        res = []
         layer = {}
         layer[beginWord] = [[beginWord]]
 
@@ -71,7 +72,7 @@ class Solution2(object):
             newlayer = collections.defaultdict(list)
             for w in layer:
                 if w == endWord:
-                    res.extend(k for k in layer[w])
+                    return layer[w]
                 else:
                     for i in range(len(w)):
                         for c in 'abcdefghijklmnopqrstuvwxyz':
@@ -82,7 +83,7 @@ class Solution2(object):
             wordList -= set(newlayer.keys())
             layer = newlayer
 
-        return res
+        return []
 
     def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
         if endWord not in wordList:
