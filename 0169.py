@@ -14,6 +14,7 @@ class Solution(object):
         return max(counts.keys(), key=counts.get)
 
     def majorityElement2(self, nums):
+        # 投票法
         count = 0
         candidate = None
 

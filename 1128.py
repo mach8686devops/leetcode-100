@@ -8,8 +8,8 @@ class Solution:
         print([n if n >= 2 else 0 for n in c.values()])
 
         return sum(
-            c * (c - 1)
-            for c in Counter(
+            i * (i - 1)
+            for i in Counter(
                 tuple(sorted(d))
                 for d in dominoes
             ).values()

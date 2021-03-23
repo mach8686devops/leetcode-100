@@ -8,7 +8,7 @@ class Solution(object):
         if n == 1:
             return nums[0]
         ans = pos = nums[0]
-        for i in range(1, len(nums)):
+        for i in range(1, n):
             pos = max(pos + nums[i], nums[i])
             ans = max(ans, pos)
         return ans
