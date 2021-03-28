@@ -14,6 +14,7 @@ class Solution:
         # return [-1, -1]
 
     def twoSum2(self, numbers, target):
+        # 双指针解法
         if not numbers:
             return [-1, -1]
 

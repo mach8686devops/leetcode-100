@@ -41,10 +41,10 @@ class Solution(object):
                 continue
             i, j = k + 1, n - 1
             while i < j:
-                sum = nums[i] + nums[j] + nums[k]
-                if sum < 0:
+                sumi = nums[i] + nums[j] + nums[k]
+                if sumi < 0:
                     i += 1
-                elif sum > 0:
+                elif sumi > 0:
                     j -= 1
                 else:
                     res.add((nums[i], nums[j], nums[k]))

@@ -6,9 +6,11 @@ class ListNode:
 
 class Solution:
     def sortList(self, head: ListNode) -> ListNode:
-        if not (head and head.next): return head
+        if not (head and head.next):
+            return head
         pre, slow, fast = None, head, head
-        while fast and fast.next: pre, slow, fast = slow, slow.next, fast.next.next
+        while fast and fast.next:
+            pre, slow, fast = slow, slow.next, fast.next.next
         pre.next = None
         return self.mergeTwoLists(*map(self.sortList, (head, slow)))
 

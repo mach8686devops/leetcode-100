@@ -1,10 +1,12 @@
 import collections
-from typing import List
 import string
+from typing import List
+
 
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
         wordList = set(wordList)
+        # 双端队列
         queue = collections.deque([(beginWord, 1)])
 
         while queue:

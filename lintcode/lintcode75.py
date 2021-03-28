@@ -2,7 +2,7 @@ class Solution:
     # @param A: An integers list.
     # @return: return any of peek positions.
     def findPeak(self, A):
-        # write your code here
+        # 头 尾部指针
         start, end = 1, len(A) - 2
         while start + 1 < end:
             mid = (start + end) // 2

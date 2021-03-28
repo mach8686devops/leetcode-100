@@ -1,5 +1,8 @@
 from typing import List
+
+
 # 此题product 函数的使用 或者确切是类使用
+
 
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
@@ -27,8 +30,13 @@ class Solution:
         }
 
         res = [i for i in digit2chars[digits[0]]]
+        print(res)
 
         for i in digits[1:]:
             res = [m + n for m in res for n in digit2chars[i]]
 
         return res
+
+
+digits = "239"
+print(Solution().letterCombinations2(digits))

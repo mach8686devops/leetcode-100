@@ -1,4 +1,5 @@
 class Solution(object):
+    # 快慢指针
     def hasCycle(self, head):
         slow = fast = head
         while fast and fast.next:

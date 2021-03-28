@@ -27,5 +27,3 @@ class Solution(object):
 
     def majorityElement3(self, nums: List[int]) -> int:
         return sorted(nums)[len(nums) // 2]
-
-
