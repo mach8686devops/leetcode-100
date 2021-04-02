@@ -15,6 +15,7 @@ class Solution:
         :type digits: str
         :rtype: List[str]
         """
+        # 列表生成式 迭代使用
         if not digits:
             return []
 
@@ -34,9 +35,37 @@ class Solution:
 
         for i in digits[1:]:
             res = [m + n for m in res for n in digit2chars[i]]
+            print(res)
 
         return res
 
 
-digits = "239"
+class Solution2:
+    def letterCombinations(self, digits: str) -> List[str]:
+        if not digits:
+            return []
+
+        # 使用列表替代字典的做法
+        digit2char = [
+            "_",
+            "_",
+            "abc",
+            "def",
+            "ghi",
+            "jkl",
+            "mno",
+            "pqrs",
+            "tuv",
+            "wxyz"
+        ]
+
+        res = [i for i in digit2char[int(digits[0])]]
+
+        for item in digits[1:]:
+            res = [m + n for m in res for n in digit2char[int(item)]]
+
+        return res
+
+
+digits = "2394"
 print(Solution().letterCombinations2(digits))
