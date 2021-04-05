@@ -30,6 +30,7 @@ class Solution:
             '9': 'wxyz'
         }
 
+        # 首数字先对应生成列表
         res = [i for i in digit2chars[digits[0]]]
         print(res)
 

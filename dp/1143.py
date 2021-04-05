@@ -1,5 +1,6 @@
 # 最长公共子序列
 
+
 class Solution(object):
     def longestCommonSubsequence(self, text1, text2):
         """
