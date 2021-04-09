@@ -1,5 +1,6 @@
 import collections
 import string
+from typing import List
 
 
 class Solution(object):
@@ -51,8 +52,9 @@ class Solution2(object):
                     return layer[word]  # return all found sequences
                 for i in range(len(word)):  # change every possible letter and check if it's in dictionary
                     # for c in 'abcdefghijklmnopqrstuvwxyz':
+                    first, second = word[:i], word[i + 1:]
                     for c in string.ascii_lowercase:
-                        newWord = word[:i] + c + word[i + 1:]
+                        newWord = first + c + second
                         if newWord in wordSet:
                             newlayer[newWord] += [j + [newWord] for j in layer[
                                 word]]  # add new word to all sequences and form new layer element
