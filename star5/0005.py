@@ -7,7 +7,7 @@
 class Solution3:
     def longestPalindrome(self, s: str) -> str:
         n = len(s)
-        res = str()
+        res = ""
         if n < 2:
             return s
         for i in range(n - 1):
