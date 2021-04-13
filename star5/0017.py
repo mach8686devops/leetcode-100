@@ -40,9 +40,7 @@ class Solution:
 
         return res
 
-
-class Solution2:
-    def letterCombinations(self, digits: str) -> List[str]:
+    def letterCombinations3(self, digits: str) -> List[str]:
         if not digits:
             return []
 
